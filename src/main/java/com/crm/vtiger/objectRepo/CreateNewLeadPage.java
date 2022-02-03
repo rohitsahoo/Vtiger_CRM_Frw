@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.crm.vtiger.genericLibrary.WebDriverUtility;
+
 
 
 
@@ -51,6 +53,17 @@ public class CreateNewLeadPage
 	{
 		lastNameTbx.sendKeys(lastName);
 		companyTbx.sendKeys(companyName);
+		saveBtn.click();
+	}
+	
+	public void createNewLead(String lastName, String companyName, String industryName)
+	{
+		lastNameTbx.sendKeys(lastName);
+		companyTbx.sendKeys(companyName);
+		
+		WebDriverUtility wLib = new WebDriverUtility();
+		wLib.select(industrySelectBox, industryName);
+		
 		saveBtn.click();
 	}
 	

@@ -15,6 +15,10 @@ import com.crm.vtiger.objectRepo.LoginPage;
 
 public abstract class BaseClass 
 {
+	public BaseClass()
+	{
+		
+	}
 	
 	public WebDriver driver;
 	public static WebDriver sDriver;

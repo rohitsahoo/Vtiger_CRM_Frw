@@ -14,6 +14,11 @@ import com.crm.vtiger.objectRepo.OrganizationInfoPage;
 
 public class CreateLeadTest extends BaseClass
 {
+	public CreateLeadTest()
+	{
+		super();
+	}
+	
 	@Test(groups = "smokeTest")
 	public void createLeadTest() throws Throwable
 	{
@@ -59,10 +64,7 @@ public class CreateLeadTest extends BaseClass
 		
 		/*Step 3: Create New Lead with Industry Name*/
 		CreateNewLeadPage cnlp = new CreateNewLeadPage(driver);
-		cnlp.getLastNameTbx().sendKeys(lastName);
-		cnlp.getCompanyTbx().sendKeys(companyName);
-		wLib.select(cnlp.getIndustrySelectBox(), industryName);
-		cnlp.getSaveBtn().click();
+		cnlp.createNewLead(lastName, companyName, industryName);
 		
 		/*Step 4: Check whether last name contains in header text or not*/
 		LeadsInfoPage lip = new LeadsInfoPage(driver);
