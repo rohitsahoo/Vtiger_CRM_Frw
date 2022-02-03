@@ -13,7 +13,7 @@ import org.testng.annotations.BeforeSuite;
 import com.crm.vtiger.objectRepo.HomePage;
 import com.crm.vtiger.objectRepo.LoginPage;
 
-public class BaseClass 
+public abstract class BaseClass 
 {
 	
 	public WebDriver driver;
